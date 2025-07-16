@@ -46,7 +46,7 @@ const Navbar = () => {
 	];
 
 	return (
-		<nav className='bg-[#17325c] text-white relative z-50 '>
+		<nav className='bg-[#17325c] text-white  z-50 fixed w-full'>
 			<div className='px-2 md:px-4'>
 				<div className='flex items-center justify-between h-20 md:h-32'>
 					{/* Logo */}
@@ -65,13 +65,15 @@ const Navbar = () => {
 						{/* Practice Areas Dropdown */}
 						<div className='relative group'>
 							<button
-								className='flex items-center space-x-1 hover:text-gray-300 transition-colors'
+								className='flex items-center space-x-1'
 								onClick={() => toggleDropdown('practice')}
 								onMouseEnter={() => setOpenDropdown('practice')}>
-								<span className='text-sm font-medium'>PRACTICE AREAS</span>
+								<span className='text-xs font-medium hover:underline active:underline'>
+									PRACTICE AREAS
+								</span>
 							</button>
 							<div
-								className={`absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md transition-all duration-200 z-50 ${
+								className={`absolute top-full left-0 mt-1 w-64 bg-[#17325c] text-white shadow-lg z-50  max-w-44 ${
 									openDropdown === 'practice'
 										? 'opacity-100 visible'
 										: 'opacity-0 invisible'
@@ -82,16 +84,16 @@ const Navbar = () => {
 										<div key={area.name}>
 											{area.hasSubmenu ? (
 												<div className='relative group/submenu'>
-													<span className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors cursor-pointer'>
+													<span className='block px-2 py-2 text-sm text-white cursor-pointer'>
 														{area.name}
 													</span>
-													<div className='absolute left-full top-0 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-200 z-50'>
+													<div className='absolute left-full top-0 w-64 shadow-lg opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-200 z-50 bg-[#17325c]'>
 														<div className='py-2'>
 															{personalSubMenu.map((subItem) => (
 																<Link
 																	key={subItem.name}
 																	to={subItem.path}
-																	className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors'
+																	className='block px-2 py-2 text-sm text-white border-b border-gray-500'
 																	onClick={() => setOpenDropdown(null)}>
 																	{subItem.name}
 																</Link>
@@ -102,7 +104,7 @@ const Navbar = () => {
 											) : (
 												<Link
 													to={area.path}
-													className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors'
+													className='block px-2 py-2 text-sm text-white border-b border-gray-500 '
 													onClick={() => setOpenDropdown(null)}>
 													{area.name}
 												</Link>
@@ -116,13 +118,15 @@ const Navbar = () => {
 						{/* WFJ Brands Dropdown */}
 						<div className='relative group'>
 							<button
-								className='flex items-center space-x-1 hover:text-gray-300 transition-colors'
+								className='flex items-center space-x-1 '
 								onClick={() => toggleDropdown('brands')}
 								onMouseEnter={() => setOpenDropdown('brands')}>
-								<span className='text-sm font-medium'>WFJ BRANDS</span>
+								<span className='text-xs font-medium hover:underline'>
+									WFJ BRANDS
+								</span>
 							</button>
 							<div
-								className={`absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md transition-all duration-200 z-50 ${
+								className={`absolute top-full left-0 mt-1 w-64 bg-[#17325c] text-white shadow-lg z-50  max-w-44 ${
 									openDropdown === 'brands'
 										? 'opacity-100 visible'
 										: 'opacity-0 invisible'
@@ -133,7 +137,7 @@ const Navbar = () => {
 										<Link
 											key={brand.name}
 											to={brand.path}
-											className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors'
+											className='block px-2 py-2 text-sm text-white border-b border-gray-500 '
 											onClick={() => setOpenDropdown(null)}>
 											{brand.name}
 										</Link>
@@ -145,35 +149,35 @@ const Navbar = () => {
 						{/* Regular Menu Items */}
 						<Link
 							to='/attorneys'
-							className={`text-sm font-medium hover:text-gray-300 transition-colors ${
+							className={`text-xs font-medium hover:underline ${
 								location.pathname === '/attorneys' ? 'underline' : ''
 							}`}>
 							ATTORNEYS
 						</Link>
 						<Link
 							to='/perspectives'
-							className={`text-sm font-medium hover:text-gray-300 transition-colors ${
+							className={`text-xs font-medium transition-colors hover:underline ${
 								location.pathname === '/perspectives' ? 'underline' : ''
 							}`}>
 							PERSPECTIVES
 						</Link>
 						<Link
 							to='/contact'
-							className={`text-sm font-medium hover:text-gray-300 transition-colors ${
+							className={`text-xs font-medium hover:underline transition-colors ${
 								location.pathname === '/contact' ? 'underline' : ''
 							}`}>
 							CONTACT
 						</Link>
 						<Link
 							to='/careers'
-							className={`text-sm font-medium hover:text-gray-300 transition-colors ${
+							className={`text-xs font-medium hover:underline transition-colors ${
 								location.pathname === '/careers' ? 'underline' : ''
 							}`}>
 							CAREERS
 						</Link>
 						<Link
 							to='/client-login'
-							className={`text-sm font-medium hover:text-gray-300 transition-colors ${
+							className={`text-xs font-medium hover:underline transition-colors ${
 								location.pathname === '/client-login' ? 'underline' : ''
 							}`}>
 							CLIENT LOGIN
@@ -224,7 +228,7 @@ const Navbar = () => {
 									<div key={area.name}>
 										{area.hasSubmenu ? (
 											<div>
-												<div className='px-3 py-2 text-sm font-medium text-gray-300 border-b border-gray-500'>
+												<div className=' py-2 text-sm font-medium text-gray-300 border-b border-gray-500'>
 													{area.name}
 												</div>
 												<div className='pl-4 space-y-1'>
@@ -282,7 +286,7 @@ const Navbar = () => {
 									<Link
 										key={brand.name}
 										to={brand.path}
-										className='block px-3 py-2 text-sm  border-b border-gray-500'
+										className='block py-2 text-sm  border-b border-gray-500'
 										onClick={() => {
 											setIsMobileMenuOpen(false);
 											setOpenDropdown(null);
