@@ -21,6 +21,10 @@
 	font-style: normal;
 }
 
+body {
+	font-family: 'DIN Next', sans-serif;
+}
+
 .font-din {
 	font-family: 'DIN Next', sans-serif;
 }

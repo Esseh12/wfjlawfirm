@@ -3,6 +3,8 @@ import Hero from '../component/Contact/hero';
 import SupportComponent from '../component/suuportService/supportService';
 import TestimonialSlider from '../component/TestimonialSlider';
 import ContactForm from '../component/suuportService/ContactForm';
+import { testimonials } from '../component/data';
+
 const SupportServices = () => {
 	return (
 		<>
@@ -48,7 +50,10 @@ const SupportServices = () => {
 				</div>
 			</div>
 			<SupportComponent />
-			<TestimonialSlider />
+			<TestimonialSlider
+				testimonials={testimonials}
+				heading='What Our Clients Say'
+			/>
 			<ContactForm />
 		</>
 	);

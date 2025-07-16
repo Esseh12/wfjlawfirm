@@ -4,6 +4,15 @@ import Contact from './pages/contact';
 import Careers from './pages/careers';
 import Attorney from './pages/attorneys';
 import SupportServices from './pages/supportServices';
+import WagnerBuisnessSolution from './pages/wagnerBuisnessSolution';
+import Business from './pages/practiceAreas/business';
+import CommercialCollections from './pages/practiceAreas/commercialCollections';
+import Construction from './pages/practiceAreas/construction';
+import Employment from './pages/practiceAreas/employment';
+import Litigation from './pages/practiceAreas/litigation';
+import PersonalFamilyLaw from './pages/practiceAreas/personal/familylaw';
+import LegalSheidServices from './pages/practiceAreas/personal/legalSheidServices';
+import PersonalInjury from './pages/practiceAreas/personal/personalInjury';
 import Footer from './component/footer';
 
 const App = () => {
@@ -31,6 +40,42 @@ const App = () => {
 					<Route
 						path='/support-services'
 						element={<SupportServices />}
+					/>
+					<Route
+						path='/wbs'
+						element={<WagnerBuisnessSolution />}
+					/>
+					<Route
+						path='/practice-areas/business'
+						element={<Business />}
+					/>
+					<Route
+						path='/practice-areas/commercial-collections'
+						element={<CommercialCollections />}
+					/>
+					<Route
+						path='/practice-areas/construction'
+						element={<Construction />}
+					/>
+					<Route
+						path='/practice-areas/employment'
+						element={<Employment />}
+					/>
+					<Route
+						path='/practice-areas/litigation'
+						element={<Litigation />}
+					/>
+					<Route
+						path='/practice-areas/personal/family-law'
+						element={<PersonalFamilyLaw />}
+					/>
+					<Route
+						path='/practice-areas/personal/legal-shield'
+						element={<LegalSheidServices />}
+					/>
+					<Route
+						path='/practice-areas/personal/personal-injury'
+						element={<PersonalInjury />}
 					/>
 				</Routes>
 			</div>

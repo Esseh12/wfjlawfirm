@@ -2,7 +2,7 @@ import bgImage from '../../assets/images/hero-pattern.png';
 
 const Hero = ({ title = 'CONTACT' }) => {
 	return (
-		<section className='bg-[#1b3a68] flex items-center justify-center overflow-hidden relative h-[230px]'>
+		<section className='bg-[#1b3a68] flex flex-col md:flex-row items-center justify-center overflow-hidden relative h-[230px]'>
 			{/* Left side with clipped background */}
 			<div
 				className='w-[700px] h-full'
