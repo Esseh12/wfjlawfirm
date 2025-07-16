@@ -46,29 +46,29 @@ const Navbar = () => {
 	];
 
 	return (
-		<nav className='bg-[#17325c] text-white relative z-50'>
-			<div className='px-4'>
-				<div className='flex items-center justify-between h-32'>
+		<nav className='bg-[#17325c] text-white relative z-50 '>
+			<div className='px-2 md:px-4'>
+				<div className='flex items-center justify-between h-20 md:h-32'>
 					{/* Logo */}
 					<div className='flex-shrink-0'>
 						<Link to='/'>
 							<img
 								src={logo}
 								alt='logo'
-								className='w-96'
+								className='w-60 sm:w-60 md:w-96'
 							/>
 						</Link>
 					</div>
 
 					{/* Desktop Menu */}
-					<div className='hidden lg:flex items-center space-x-8'>
+					<div className='hidden lg:flex items-center space-x-4'>
 						{/* Practice Areas Dropdown */}
 						<div className='relative group'>
 							<button
 								className='flex items-center space-x-1 hover:text-gray-300 transition-colors'
 								onClick={() => toggleDropdown('practice')}
 								onMouseEnter={() => setOpenDropdown('practice')}>
-								<span className='font-medium'>PRACTICE AREAS</span>
+								<span className='text-sm font-medium'>PRACTICE AREAS</span>
 							</button>
 							<div
 								className={`absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md transition-all duration-200 z-50 ${
@@ -119,7 +119,7 @@ const Navbar = () => {
 								className='flex items-center space-x-1 hover:text-gray-300 transition-colors'
 								onClick={() => toggleDropdown('brands')}
 								onMouseEnter={() => setOpenDropdown('brands')}>
-								<span className='font-medium'>WFJ BRANDS</span>
+								<span className='text-sm font-medium'>WFJ BRANDS</span>
 							</button>
 							<div
 								className={`absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md transition-all duration-200 z-50 ${
@@ -145,35 +145,35 @@ const Navbar = () => {
 						{/* Regular Menu Items */}
 						<Link
 							to='/attorneys'
-							className={`font-medium hover:text-gray-300 transition-colors ${
+							className={`text-sm font-medium hover:text-gray-300 transition-colors ${
 								location.pathname === '/attorneys' ? 'underline' : ''
 							}`}>
 							ATTORNEYS
 						</Link>
 						<Link
 							to='/perspectives'
-							className={`font-medium hover:text-gray-300 transition-colors ${
+							className={`text-sm font-medium hover:text-gray-300 transition-colors ${
 								location.pathname === '/perspectives' ? 'underline' : ''
 							}`}>
 							PERSPECTIVES
 						</Link>
 						<Link
 							to='/contact'
-							className={`font-medium hover:text-gray-300 transition-colors ${
+							className={`text-sm font-medium hover:text-gray-300 transition-colors ${
 								location.pathname === '/contact' ? 'underline' : ''
 							}`}>
 							CONTACT
 						</Link>
 						<Link
 							to='/careers'
-							className={`font-medium hover:text-gray-300 transition-colors ${
+							className={`text-sm font-medium hover:text-gray-300 transition-colors ${
 								location.pathname === '/careers' ? 'underline' : ''
 							}`}>
 							CAREERS
 						</Link>
 						<Link
 							to='/client-login'
-							className={`font-medium hover:text-gray-300 transition-colors ${
+							className={`text-sm font-medium hover:text-gray-300 transition-colors ${
 								location.pathname === '/client-login' ? 'underline' : ''
 							}`}>
 							CLIENT LOGIN
@@ -184,7 +184,7 @@ const Navbar = () => {
 					<div className='lg:hidden'>
 						<button
 							onClick={toggleMobileMenu}
-							className='p-2 rounded-md text-white hover:text-gray-300 hover:bg-[#1e3a52] transition-colors'>
+							className='p-2 rounded-md text-white hover:text-gray-300 transition-colors '>
 							{isMobileMenuOpen ? (
 								<HiX className='w-6 h-6' />
 							) : (
@@ -197,7 +197,7 @@ const Navbar = () => {
 
 			{/* Mobile Menu */}
 			<div
-				className={`lg:hidden fixed inset-0 top-32 bg-[#2C4A6B] z-40 transition-all duration-300 ${
+				className={`lg:hidden fixed inset-0 top-20 bg-[#17325c] z-40 transition-all duration-300 ${
 					isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
 				}`}>
 				<div className='px-4 pt-2 pb-6 space-y-1 h-full overflow-y-auto'>
@@ -205,21 +205,26 @@ const Navbar = () => {
 					<div>
 						<button
 							onClick={() => toggleDropdown('practice')}
-							className='w-full flex items-center justify-between px-3 py-3 text-left font-medium hover:bg-[#1e3a52] transition-colors border-b border-[#1e3a52]'>
+							className='w-full flex items-center justify-between px-3 py-3 text-left font-medium hover:bg-[#17325c] transition-colors border-b border-gray-500'>
 							<span>PRACTICE AREAS</span>
+							{openDropdown === 'brands' ? (
+								<ChevronUp className='w-4 h-4' />
+							) : (
+								<ChevronDown className='w-4 h-4' />
+							)}
 						</button>
 						<div
 							className={`transition-all duration-300 ${
 								openDropdown === 'practice'
-									? 'max-h-96 opacity-100'
+									? 'max-h-96 opacity-100 '
 									: 'max-h-0 opacity-0'
 							} overflow-hidden`}>
-							<div className='pl-6 py-2 space-y-1 bg-[#1e3a52]'>
+							<div className='pl-6 py-2 space-y-1 bg-[#17325c]'>
 								{practiceAreas.map((area) => (
 									<div key={area.name}>
 										{area.hasSubmenu ? (
 											<div>
-												<div className='px-3 py-2 text-sm font-medium text-gray-300'>
+												<div className='px-3 py-2 text-sm font-medium text-gray-300 border-b border-gray-500'>
 													{area.name}
 												</div>
 												<div className='pl-4 space-y-1'>
@@ -258,7 +263,7 @@ const Navbar = () => {
 					<div>
 						<button
 							onClick={() => toggleDropdown('brands')}
-							className='w-full flex items-center justify-between px-3 py-3 text-left font-medium hover:bg-[#1e3a52] transition-colors border-b border-[#1e3a52]'>
+							className='w-full flex items-center justify-between px-3 py-3 text-left font-medium hover:bg-[#17325c] transition-colors border-b border-gray-500'>
 							<span>WFJ BRANDS</span>
 							{openDropdown === 'brands' ? (
 								<ChevronUp className='w-4 h-4' />
@@ -272,12 +277,12 @@ const Navbar = () => {
 									? 'max-h-96 opacity-100'
 									: 'max-h-0 opacity-0'
 							} overflow-hidden`}>
-							<div className='pl-6 py-2 space-y-1 bg-[#1e3a52]'>
+							<div className='pl-6 py-2 space-y-1 bg-[#17325c]'>
 								{wfjBrands.map((brand) => (
 									<Link
 										key={brand.name}
 										to={brand.path}
-										className='block px-3 py-2 text-sm hover:bg-[#2C4A6B] transition-colors'
+										className='block px-3 py-2 text-sm  border-b border-gray-500'
 										onClick={() => {
 											setIsMobileMenuOpen(false);
 											setOpenDropdown(null);
@@ -292,31 +297,31 @@ const Navbar = () => {
 					{/* Regular Mobile Menu Items */}
 					<Link
 						to='/attorneys'
-						className='block px-3 py-3 font-medium hover:bg-[#1e3a52] transition-colors border-b border-[#1e3a52]'
+						className='block px-3 py-3 font-medium hover:bg-[#17325c] transition-colors border-b border-gray-500'
 						onClick={() => setIsMobileMenuOpen(false)}>
 						ATTORNEYS
 					</Link>
 					<Link
 						to='/perspectives'
-						className='block px-3 py-3 font-medium hover:bg-[#1e3a52] transition-colors border-b border-[#1e3a52]'
+						className='block px-3 py-3 font-medium hover:bg-[#17325c] transition-colors border-b border-gray-500'
 						onClick={() => setIsMobileMenuOpen(false)}>
 						PERSPECTIVES
 					</Link>
 					<Link
 						to='/contact'
-						className='block px-3 py-3 font-medium hover:bg-[#1e3a52] transition-colors border-b border-[#1e3a52]'
+						className='block px-3 py-3 font-medium hover:bg-[#17325c] transition-colors border-b border-gray-500'
 						onClick={() => setIsMobileMenuOpen(false)}>
 						CONTACT
 					</Link>
 					<Link
 						to='/careers'
-						className='block px-3 py-3 font-medium hover:bg-[#1e3a52] transition-colors border-b border-[#1e3a52] underline'
+						className='block px-3 py-3 font-medium hover:bg-[#17325c] transition-colors border-b border-gray-500 underline'
 						onClick={() => setIsMobileMenuOpen(false)}>
 						CAREERS
 					</Link>
 					<Link
 						to='/client-login'
-						className='block px-3 py-3 font-medium hover:bg-[#1e3a52] transition-colors'
+						className='block px-3 py-3 font-medium hover:bg-[#17325c] transition-colors'
 						onClick={() => setIsMobileMenuOpen(false)}>
 						CLIENT LOGIN
 					</Link>

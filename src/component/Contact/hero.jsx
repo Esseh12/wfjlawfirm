@@ -2,10 +2,10 @@ import bgImage from '../../assets/images/hero-pattern.png';
 
 const Hero = ({ title = 'CONTACT' }) => {
 	return (
-		<section className='bg-[#1b3a68] flex flex-col md:flex-row items-center justify-center overflow-hidden relative h-[230px]'>
-			{/* Left side with clipped background */}
+		<section className='bg-[#1b3a68] flex items-center justify-center overflow-hidden relative h-[230px]'>
+			{/* Left side with clipped background - hidden on mobile */}
 			<div
-				className='w-[700px] h-full'
+				className='hidden md:block w-[700px] h-full  left-0 top-0'
 				style={{
 					backgroundImage: `url(${bgImage})`,
 					backgroundSize: 'cover',
@@ -16,7 +16,7 @@ const Hero = ({ title = 'CONTACT' }) => {
 			/>
 
 			{/* Right side with text */}
-			<div className='z-10 text-right w-full flex self-center'>
+			<div className=' text-center md:text-right w-full flex justify-start  px-4 md:px-8'>
 				<h1 className='text-white text-4xl md:text-5xl font-light tracking-[0.3em] uppercase md:leading-[53px]'>
 					{title}
 				</h1>

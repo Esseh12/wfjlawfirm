@@ -2,15 +2,8 @@
 
 @font-face {
 	font-family: 'DIN Next';
-	src: url('./assets/DINNext/DINNextW1G-Regular.otf') format('opentype');
+	src: url('./assets/DINNext/DINNextW1G-Black.otf') format('opentype');
 	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'DIN Next';
-	src: url('./assets/DINNext/DINNextW1G-Bold.otf') format('opentype');
-	font-weight: bold;
 	font-style: normal;
 }
 
