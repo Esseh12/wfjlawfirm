@@ -46,9 +46,9 @@ const Navbar = () => {
 	];
 
 	return (
-		<nav className='bg-[#17325c] text-white  z-50 fixed w-full'>
+		<nav className='bg-[#17325c] text-white  z-50 fixed w-full md:px-12'>
 			<div className='px-2 md:px-4'>
-				<div className='flex items-center justify-between h-20 md:h-32'>
+				<div className='flex items-center justify-between h-20 md:h-28'>
 					{/* Logo */}
 					<div className='flex-shrink-0'>
 						<Link to='/'>

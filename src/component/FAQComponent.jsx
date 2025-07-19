@@ -57,7 +57,7 @@ const FAQComponent = () => {
 										<Plus size={20} />
 									)}
 								</div>
-								<h2 className='text-xl sm:text-2xl md:text-3xl leading-10 font-bold text-[#1B3A68] tracking-wide'>
+								<h2 className='xs:text-xl sm:text-2xl md:text-3xl leading-10 font-bold text-[#1B3A68] tracking-wide'>
 									{item.title}
 								</h2>
 							</div>

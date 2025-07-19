@@ -257,3 +257,559 @@ export const commercialTestimonials = [
 		image: commercial3,
 	},
 ];
+
+export const blogData = [
+	{
+		id: 1,
+		title:
+			'From Reactive to Proactive: Why Outsourcing Legal Support is a Smart Compliance Strategy',
+		categories: [
+			'Employment',
+			'Practice Highlights',
+			'The Compliance Center',
+			'WFJ Business Services',
+			'WFJ Law Firm',
+		],
+		excerpt:
+			'For too many businesses, compliance becomes a priority only after something goes wrong. At WFJ, we help businesses shift from costly reaction to strategic prevention.',
+		content: [
+			{
+				type: 'paragraph',
+				text: "For too many businesses, compliance becomes a priority only **after** something goes wrong. Maybe it's an employee complaint, a Department of Labor audit, or a lawsuit that lands on your desk with no warning. These moments often trigger a reactive approach–scrambling to hire a lawyer, conduct internal investigations, or settle claims to avoid deeper trouble.",
+			},
+			{
+				type: 'paragraph',
+				text: 'At WFJ, we help businesses shift from costly reaction to strategic prevention. And we believe the smartest way to do that is by outsourcing legal support.',
+			},
+			{
+				type: 'image',
+				alt: 'Business meeting discussion',
+				placeholder: 'Business+Meeting',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Reactive Compliance: The Cost of Waiting Too Long',
+			},
+			{
+				type: 'paragraph',
+				text: "Reactive compliance means responding to legal issues only **after** they've surfaced–when the damage is already done.",
+			},
+			{
+				type: 'section',
+				title: 'Common Characteristics:',
+				items: [
+					{
+						label: 'Focus',
+						text: 'Putting out fires instead of **preventing** them.',
+					},
+					{
+						label: 'Cost',
+						text: 'Legal fees, fines, and reputational hits can add up quickly.',
+					},
+					{
+						label: 'Risk',
+						text: 'Waiting until a lawsuit, audit, or complaint arises **increases your exposure to penalties and public scrutiny**.',
+					},
+				],
+			},
+			{
+				type: 'callout',
+				text: '**Example:** A business responds to a discrimination lawsuit by hiring legal counsel after the claim is filed–often leading to a costly settlement, public relations fallout, and internal morale issues.',
+			},
+			{
+				type: 'section',
+				title: "Why it's a problem:",
+				items: [
+					{
+						text: 'Trust with employees and the public may take years to rebuild',
+					},
+				],
+			},
+			{
+				type: 'image',
+				alt: 'Team collaboration',
+				placeholder: 'Team+Icons',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Proactive Compliance: A Legal Safety Net Built to Prevent',
+			},
+			{
+				type: 'paragraph',
+				text: 'Proactive compliance focuses on identifying potential risks and putting policies in place to **avoid them altogether**.',
+			},
+		],
+	},
+	{
+		id: 2,
+		title:
+			'Understanding the UCC-1 Filing Process: A Guide for Finance Professionals',
+		categories: ['News', 'WFJ Law Firm'],
+		excerpt:
+			'When extending credit, protecting your rights as a secured party is critical. The UCC-1 filing process is essential for preserving priority if a debtor defaults.',
+		content: [
+			{
+				type: 'paragraph',
+				text: "When extending credit, protecting your rights as a secured party is critical. One of the most effective tools for doing so is the Uniform Commercial Code (UCC) Financing Statement–commonly referred to as a UCC-1. This legal document serves as a public notice of your security interest in debtor's personal property and is essential for preserving priority if a debtor defaults.",
+			},
+			{
+				type: 'paragraph',
+				text: '**Below is a breakdown of the UCC-1 process that every finance and credit professional should understand.**',
+			},
+			{
+				type: 'image',
+				alt: 'Legal documents and filing',
+				placeholder: 'Legal+Documents',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Step 1: Secure a Signed Security Agreement',
+			},
+			{
+				type: 'paragraph',
+				text: 'Before filing a UCC-1, you must have a security agreement in place–this document proves that the debtor has agreed to give you a security interest in their collateral.',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Step 2: File the UCC-1 Financing Statement',
+			},
+			{
+				type: 'paragraph',
+				text: "Once you've secured the agreement, the next step is filing the UCC-1 to perfect your interest. This filing is typically done with the Secretary of State in the Debtor's state of incorporation (for business) or residency (for individuals).",
+			},
+			{
+				type: 'paragraph',
+				text: '**A valid UCC-1 must include:**',
+			},
+			{
+				type: 'list',
+				ordered: true,
+				items: [
+					"Debtor's full legal name and address",
+					"Creditor's (secured party's) name and address",
+					'A description of the collateral',
+				],
+			},
+			{
+				type: 'quote',
+				title: 'Sample Language:',
+				text: '"Debtor\'s inventory, including all documents, books and records related to the inventory, now owned or herafter acquired by Debtor from Secured Party or its successors and/or assigns, and the proceeds therefrom, including all proceeds from any insurance payable by reason of loss, damage, or destruction of any item of the inventory."',
+			},
+		],
+	},
+	{
+		id: 3,
+		title:
+			'Commercial Lease Negotiations: Key Terms Every Business Owner Should Know',
+		categories: ['Business Law', 'Commercial Real Estate', 'WFJ Law Firm'],
+		excerpt:
+			'Negotiating a commercial lease can make or break your business venture. Understanding key terms and common pitfalls can save you thousands in the long run.',
+		content: [
+			{
+				type: 'paragraph',
+				text: "When it comes to establishing your business location, the **commercial lease agreement** is one of the most critical documents you'll sign. A well-negotiated lease can provide stability and growth opportunities, while a poorly structured one can become a financial burden that threatens your business's survival.",
+			},
+			{
+				type: 'paragraph',
+				text: 'Understanding the key terms and negotiation points is essential for any business owner entering the commercial real estate market.',
+			},
+			{
+				type: 'image',
+				alt: 'Commercial building and lease signing',
+				placeholder: 'Commercial+Building',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Essential Lease Terms to Negotiate',
+			},
+			{
+				type: 'section',
+				title: 'Critical Components:',
+				items: [
+					{
+						label: 'Base Rent',
+						text: 'Ensure you understand whether rent increases are fixed or tied to market rates.',
+					},
+					{
+						label: 'Triple Net (NNN)',
+						text: "Know what additional costs you'll be responsible for beyond base rent.",
+					},
+					{
+						label: 'Assignment Rights',
+						text: 'Negotiate your ability to **transfer the lease** if you sell your business.',
+					},
+				],
+			},
+			{
+				type: 'callout',
+				text: '**Pro Tip:** Always include a personal guarantee limitation clause to protect your personal assets from business lease obligations.',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Common Pitfalls to Avoid',
+			},
+			{
+				type: 'paragraph',
+				text: 'Many business owners focus solely on the monthly rent amount and miss critical details that can cost them significantly over the lease term.',
+			},
+		],
+	},
+	{
+		id: 4,
+		title: 'Employment Law Update: Navigating the New Remote Work Regulations',
+		categories: ['Employment', 'Labor Law', 'Remote Work', 'WFJ Law Firm'],
+		excerpt:
+			'As remote work becomes permanent for many businesses, understanding the evolving legal landscape is crucial for compliance and protecting your workforce.',
+		content: [
+			{
+				type: 'paragraph',
+				text: 'The shift to remote work has fundamentally changed the employment landscape, bringing new legal challenges and compliance requirements that many employers are still navigating. From **wage and hour issues** to workplace safety obligations, remote work creates a complex web of legal considerations.',
+			},
+			{
+				type: 'paragraph',
+				text: 'Recent regulatory updates have clarified many gray areas, but businesses must stay informed to avoid costly violations.',
+			},
+			{
+				type: 'image',
+				alt: 'Remote work setup and legal compliance',
+				placeholder: 'Remote+Work+Legal',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Key Compliance Areas for Remote Workers',
+			},
+			{
+				type: 'section',
+				title: 'Primary Concerns:',
+				items: [
+					{
+						label: 'Overtime Tracking',
+						text: 'Implement systems to **accurately track** remote employee hours.',
+					},
+					{
+						label: 'Equipment Liability',
+						text: 'Clarify who is responsible for home office equipment and maintenance.',
+					},
+					{
+						label: 'Data Security',
+						text: 'Ensure remote work policies meet cybersecurity and privacy requirements.',
+					},
+				],
+			},
+			{
+				type: 'callout',
+				text: '**Important:** Multi-state remote teams may trigger tax and regulatory obligations in multiple jurisdictions.',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Updating Your Employee Handbook',
+			},
+			{
+				type: 'paragraph',
+				text: "Traditional employee handbooks often don't address remote work scenarios. Companies should update policies to specifically address remote work expectations, communication protocols, and performance metrics.",
+			},
+		],
+	},
+	{
+		id: 5,
+		title:
+			'Intellectual Property Protection for Small Businesses: Beyond Trademarks',
+		categories: [
+			'Intellectual Property',
+			'Business Law',
+			'Small Business',
+			'WFJ Law Firm',
+		],
+		excerpt:
+			'While most businesses understand trademarks, comprehensive IP protection involves trade secrets, copyrights, and strategic licensing that many overlook.',
+		content: [
+			{
+				type: 'paragraph',
+				text: 'Most small businesses recognize the importance of **trademark protection** for their brand names and logos, but intellectual property strategy extends far beyond simple trademark registration. A comprehensive IP approach can become one of your most valuable business assets.',
+			},
+			{
+				type: 'paragraph',
+				text: 'Understanding the full spectrum of intellectual property protection can mean the difference between a defensible competitive advantage and costly legal battles.',
+			},
+			{
+				type: 'image',
+				alt: 'Intellectual property and innovation',
+				placeholder: 'IP+Protection',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'The Four Pillars of IP Protection',
+			},
+			{
+				type: 'section',
+				title: 'Complete IP Strategy:',
+				items: [
+					{
+						label: 'Trade Secrets',
+						text: 'Protect confidential business information through **proper documentation** and employee agreements.',
+					},
+					{
+						label: 'Copyrights',
+						text: 'Secure rights to original works including software, marketing materials, and training content.',
+					},
+					{
+						label: 'Patents',
+						text: 'Consider patent protection for unique processes, methods, or inventions.',
+					},
+					{
+						label: 'Licensing',
+						text: 'Generate revenue streams by licensing your IP to other businesses.',
+					},
+				],
+			},
+			{
+				type: 'callout',
+				text: '**Strategy Tip:** Conduct regular IP audits to identify unprotected assets and potential infringement risks.',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Common IP Mistakes Small Businesses Make',
+			},
+			{
+				type: 'list',
+				ordered: false,
+				items: [
+					'Failing to protect trade secrets with proper confidentiality agreements',
+					'Not registering copyrights for valuable business content',
+					'Missing patent filing deadlines for innovative processes',
+				],
+			},
+		],
+	},
+	{
+		id: 6,
+		title:
+			'Debt Collection Best Practices: Staying Compliant While Maximizing Recovery',
+		categories: [
+			'Collections',
+			'Business Law',
+			'FDCPA Compliance',
+			'WFJ Law Firm',
+		],
+		excerpt:
+			'Effective debt collection requires balancing aggressive recovery tactics with strict compliance requirements. Learn the strategies that protect your business while maximizing results.',
+		content: [
+			{
+				type: 'paragraph',
+				text: 'Debt collection is a critical component of maintaining healthy cash flow, but the regulatory landscape has become increasingly complex. The **Fair Debt Collection Practices Act (FDCPA)** and state-specific regulations create a minefield of potential violations that can result in significant penalties.',
+			},
+			{
+				type: 'paragraph',
+				text: 'Successful collection strategies balance assertive recovery efforts with meticulous compliance to avoid costly legal challenges.',
+			},
+			{
+				type: 'image',
+				alt: 'Debt collection and legal compliance',
+				placeholder: 'Debt+Collection',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Compliance-First Collection Strategy',
+			},
+			{
+				type: 'section',
+				title: 'Best Practices:',
+				items: [
+					{
+						label: 'Documentation',
+						text: 'Maintain **detailed records** of all collection communications and payment agreements.',
+					},
+					{
+						label: 'Timing Rules',
+						text: 'Respect calling hour restrictions and frequency limitations.',
+					},
+					{
+						label: 'Validation Rights',
+						text: 'Provide proper debt validation notices within required timeframes.',
+					},
+				],
+			},
+			{
+				type: 'callout',
+				text: '**Critical:** Never collect on time-barred debt without proper disclosure, as this can restart the statute of limitations.',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Technology Solutions for Modern Collection',
+			},
+			{
+				type: 'paragraph',
+				text: 'Modern collection agencies leverage technology to improve efficiency while maintaining compliance. Automated systems can track communication frequency, maintain calling hour compliance, and generate required documentation.',
+			},
+			{
+				type: 'list',
+				ordered: true,
+				items: [
+					'Implement automated compliance tracking systems',
+					'Use recorded lines for all collection calls',
+					'Maintain electronic records of all collection activities',
+				],
+			},
+		],
+	},
+	{
+		id: 7,
+		title:
+			'Business Succession Planning: Protecting Your Legacy and Your Family',
+		categories: [
+			'Business Law',
+			'Estate Planning',
+			'Succession Planning',
+			'WFJ Law Firm',
+		],
+		excerpt:
+			'Most business owners spend decades building their companies but fail to plan for transition. Proper succession planning protects both business continuity and family interests.',
+		content: [
+			{
+				type: 'paragraph',
+				text: "After decades of building a successful business, many owners face a critical question: **what happens next?** Whether planning for retirement, disability, or unexpected death, business succession planning is essential for protecting the value you've created and ensuring your family's financial security.",
+			},
+			{
+				type: 'paragraph',
+				text: 'Without proper planning, successful businesses can quickly become family burdens, tax nightmares, or lost legacies.',
+			},
+			{
+				type: 'image',
+				alt: 'Business succession and family legacy',
+				placeholder: 'Business+Succession',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'The Three Pillars of Succession Planning',
+			},
+			{
+				type: 'section',
+				title: 'Essential Elements:',
+				items: [
+					{
+						label: 'Valuation Strategy',
+						text: '**Accurate business valuation** forms the foundation of any succession plan.',
+					},
+					{
+						label: 'Tax Optimization',
+						text: 'Structure transitions to minimize estate, gift, and income tax obligations.',
+					},
+					{
+						label: 'Leadership Transition',
+						text: 'Identify and prepare successors through formal development programs.',
+					},
+				],
+			},
+			{
+				type: 'callout',
+				text: '**Planning Tip:** Start succession planning at least 5-10 years before your intended transition to maximize options and minimize taxes.',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Common Succession Planning Mistakes',
+			},
+			{
+				type: 'paragraph',
+				text: 'Many business owners delay succession planning, thinking they have time to address it later. This procrastination can result in **forced sales**, family conflicts, and significant tax inefficiencies that could have been avoided with proper planning.',
+			},
+			{
+				type: 'list',
+				ordered: false,
+				items: [
+					'Waiting until health issues force immediate decisions',
+					'Failing to communicate plans with family members',
+					'Not preparing potential successors adequately',
+					'Ignoring tax implications of different transition structures',
+				],
+			},
+		],
+	},
+	{
+		id: 8,
+		title:
+			'Construction Contract Disputes: Prevention and Resolution Strategies',
+		categories: [
+			'Construction Law',
+			'Commercial Litigation',
+			'Contract Disputes',
+			'WFJ Law Firm',
+		],
+		excerpt:
+			'Construction projects are complex endeavors with multiple stakeholders and moving parts. Understanding how to prevent and resolve disputes can save projects and relationships.',
+		content: [
+			{
+				type: 'paragraph',
+				text: 'Construction projects involve numerous parties, complex timelines, and substantial financial investments. When disputes arise—as they inevitably do—the consequences can be **project delays**, cost overruns, and damaged business relationships that extend far beyond a single contract.',
+			},
+			{
+				type: 'paragraph',
+				text: 'The key to successful construction project management lies in both preventing disputes through careful contract drafting and resolving them efficiently when they occur.',
+			},
+			{
+				type: 'image',
+				alt: 'Construction site and contract management',
+				placeholder: 'Construction+Contracts',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'Dispute Prevention Through Better Contracts',
+			},
+			{
+				type: 'section',
+				title: 'Prevention Strategies:',
+				items: [
+					{
+						label: 'Clear Scope Definition',
+						text: 'Define work scope, materials, and **quality standards** with specific detail.',
+					},
+					{
+						label: 'Change Order Procedures',
+						text: 'Establish formal processes for handling scope changes and additional work.',
+					},
+					{
+						label: 'Payment Terms',
+						text: 'Include clear milestone payments, lien waiver requirements, and dispute resolution procedures.',
+					},
+				],
+			},
+			{
+				type: 'callout',
+				text: '**Best Practice:** Include mandatory mediation clauses before litigation to encourage faster, less expensive dispute resolution.',
+			},
+			{
+				type: 'heading',
+				level: 3,
+				text: 'When Disputes Cannot Be Avoided',
+			},
+			{
+				type: 'paragraph',
+				text: 'Despite best efforts, construction disputes will occur. The goal shifts to resolving them quickly and cost-effectively while preserving business relationships and project timelines wherever possible.',
+			},
+			{
+				type: 'list',
+				ordered: true,
+				items: [
+					'Document everything: photos, communications, and changed conditions',
+					'Address disputes immediately rather than letting them escalate',
+					'Consider alternative dispute resolution before litigation',
+					'Engage experienced construction counsel early in the process',
+				],
+			},
+		],
+	},
+];

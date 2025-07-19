@@ -9,8 +9,8 @@ const SupportServices = () => {
 	return (
 		<>
 			<Hero title='SUPPORT SERVICES' />
-			<div className='flex max-w-6xl mx-auto py-24 gap-8'>
-				<p className='text-xl leading-7 font-normal text-[#6B6B6B] mx-auto max-w-2xl'>
+			<div className='flex flex-col md:flex-row max-w-6xl mx-auto py-24 gap-8 px-6 md:px-0'>
+				<p className='text-lg md:text-xl leading-7 font-normal text-[#6B6B6B] mx-auto max-w-2xl'>
 					The team at Wagner, Falconer & Judd and Wagner Business Solutions
 					offer personalized, superior service. Our ultimate goal is clear: to
 					provide your business with the highest quality professional services,
@@ -20,7 +20,7 @@ const SupportServices = () => {
 					night, and can often come with risky, expensive consequences. Because
 					you’ve got a business to run.
 				</p>
-				<div className='bg-[#f0f0f0] p-8 flex flex-col justify-center items-center max-w-sm '>
+				<div className='bg-[#f0f0f0] p-8 flex flex-col justify-center items-center max-w-sm mx-auto md:mx-0'>
 					<div className='border-b-2 border-[#6b6b6b] w-full text-center pb-4'>
 						<p>Recent Webinars and Blogs</p>
 					</div>

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import rechaptha from '../../assets/images/RecaptchaLogo.png';
+import { ArrowRight } from 'lucide-react';
 
 export default function ContactForm() {
 	const [formData, setFormData] = useState({
@@ -10,7 +12,7 @@ export default function ContactForm() {
 		textOptIn: false,
 	});
 
-	const handleChange = (e) => {
+	const handleInputChange = (e) => {
 		const { name, value, type, checked } = e.target;
 		setFormData((prev) => ({
 			...prev,
@@ -28,148 +30,126 @@ export default function ContactForm() {
 		<div className='min-h-screen bg-white'>
 			{/* Main Content */}
 			<main className='max-w-4xl mx-auto px-6 py-12'>
-				<div className='text-center mb-12'>
-					<h2 className='text-2xl md:text-3xl font-bold text-slate-700 mb-4'>
+				<div className='text-center my-12'>
+					<h2 className='text-lg sm:text-xl md:text-3xl font-bold text-slate-700 mb-4'>
 						CURIOUS HOW THE DEDICATED TEAM AT WAGNER, FALCONER & JUDD COULD HELP
 						SUPPORT YOU?
 					</h2>
-					<p className='text-lg text-slate-600'>
+					<p className='md:text-lg text-slate-600'>
 						REACH OUT TO US FOR A FREE CONSULTATION FOR YOUR BUSINESS.
 					</p>
 				</div>
 
-				<div className='space-y-6'>
-					{/* Name Field */}
-					<div>
-						<label
-							htmlFor='name'
-							className='block text-sm font-medium text-slate-700 mb-2'>
-							NAME <span className='text-red-500'>*</span>
-						</label>
-						<input
-							type='text'
-							id='name'
-							name='name'
-							value={formData.name}
-							onChange={handleChange}
-							required
-							className='w-full px-4 py-3 border border-slate-300 rounded-md bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent'
-						/>
-					</div>
-
-					{/* Company Field */}
-					<div>
-						<label
-							htmlFor='company'
-							className='block text-sm font-medium text-slate-700 mb-2'>
-							COMPANY <span className='text-red-500'>*</span>
-						</label>
-						<input
-							type='text'
-							id='company'
-							name='company'
-							value={formData.company}
-							onChange={handleChange}
-							required
-							className='w-full px-4 py-3 border border-slate-300 rounded-md bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent'
-						/>
-					</div>
-
-					{/* Company Size Field */}
-					<div>
-						<label
-							htmlFor='companySize'
-							className='block text-sm font-medium text-slate-700 mb-2'>
-							COMPANY SIZE <span className='text-red-500'>*</span>
-						</label>
-						<select
-							id='companySize'
-							name='companySize'
-							value={formData.companySize}
-							onChange={handleChange}
-							required
-							className='w-full px-4 py-3 border border-slate-300 rounded-md bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent'>
-							<option value=''>Select company size</option>
-							<option value='1-10'>1-10 employees</option>
-							<option value='11-50'>11-50 employees</option>
-							<option value='51-200'>51-200 employees</option>
-							<option value='201-500'>201-500 employees</option>
-							<option value='500+'>500+ employees</option>
-						</select>
-					</div>
-
-					{/* Email Field */}
-					<div>
-						<label
-							htmlFor='email'
-							className='block text-sm font-medium text-slate-700 mb-2'>
-							EMAIL ADDRESS <span className='text-red-500'>*</span>
-						</label>
-						<input
-							type='email'
-							id='email'
-							name='email'
-							value={formData.email}
-							onChange={handleChange}
-							required
-							className='w-full px-4 py-3 border border-slate-300 rounded-md bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent'
-						/>
-					</div>
-
-					{/* Phone Field */}
-					<div>
-						<label
-							htmlFor='phone'
-							className='block text-sm font-medium text-slate-700 mb-2'>
-							PHONE <span className='text-red-500'>*</span>
-						</label>
-						<input
-							type='tel'
-							id='phone'
-							name='phone'
-							value={formData.phone}
-							onChange={handleChange}
-							required
-							className='w-full px-4 py-3 border border-slate-300 rounded-md bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent'
-						/>
-					</div>
-
-					{/* reCAPTCHA Placeholder */}
-					<div className='flex items-center space-x-3 p-4 border border-slate-300 rounded-md bg-slate-50 w-fit'>
-						<input
-							type='checkbox'
-							id='captcha'
-							required
-							className='h-5 w-5 text-slate-600 focus:ring-slate-500 border-slate-300 rounded'
-						/>
-						<label
-							htmlFor='captcha'
-							className='text-sm text-slate-700'>
-							I'm not a robot
-						</label>
-						<div className='text-xs text-slate-500'>
-							<div>reCAPTCHA</div>
-							<div>Privacy - Terms</div>
+				{/* Contact Form Section */}
+				<div className=''>
+					<div className='flex flex-col gap-5'>
+						{/* Required indicator */}
+						<div className='flex justify-end'>
+							<span className='text-gray-500 text-base'>REQUIRED *</span>
 						</div>
-					</div>
 
-					{/* Text Opt In */}
-					<div className='border-t pt-6'>
-						<h3 className='text-lg font-medium text-slate-700 mb-4'>
-							Text Opt In
-						</h3>
-						<div className='flex items-start space-x-3'>
+						{/* First Name */}
+						<div>
+							<label
+								htmlFor='firstName'
+								className='block text-base font-medium text-[#1B3A68] mb-2 uppercase tracking-wide'>
+								NAME *
+							</label>
 							<input
-								type='checkbox'
-								id='textOptIn'
-								name='textOptIn'
-								checked={formData.textOptIn}
-								onChange={handleChange}
-								className='h-5 w-5 text-slate-600 focus:ring-slate-500 border-slate-300 rounded mt-1'
+								type='text'
+								id='firstName'
+								name='firstName'
+								value={formData.firstName}
+								onChange={handleInputChange}
+								required
+								className='w-full p-5 bg-gray-100 border-0 rounded-none focus:outline-none  transition-colors'
+							/>
+						</div>
+
+						{/* Last Name */}
+						<div>
+							<label
+								htmlFor='lastName'
+								className='block text-base font-medium text-[#1B3A68] mb-2 uppercase tracking-wide'>
+								Company *
+							</label>
+							<input
+								type='text'
+								id='lastName'
+								name='lastName'
+								value={formData.company}
+								onChange={handleInputChange}
+								required
+								className='w-full p-5 bg-gray-100 border-0 rounded-none focus:outline-none  transition-colors'
+							/>
+						</div>
+
+						{/* Phone */}
+						<div>
+							<label
+								htmlFor='phone'
+								className='block text-base font-medium text-[#1B3A68] mb-2 uppercase tracking-wide'>
+								Company Size
+							</label>
+							<input
+								type='text'
+								id='phone'
+								name='phone'
+								value={formData.companySize}
+								onChange={handleInputChange}
+								className='w-full p-5 bg-gray-100 border-0 rounded-none focus:outline-none  transition-colors'
+							/>
+						</div>
+
+						{/* Email Address */}
+						<div>
+							<label
+								htmlFor='email'
+								className='block text-base font-medium text-[#1B3A68] mb-2 uppercase tracking-wide'>
+								EMAIL ADDRESS *
+							</label>
+							<input
+								type='email'
+								id='email'
+								name='email'
+								value={formData.email}
+								onChange={handleInputChange}
+								required
+								className='w-full p-5 bg-gray-100 border-0 rounded-none focus:outline-none  transition-colors'
+							/>
+						</div>
+
+						{/* Comments */}
+						<div>
+							<label
+								htmlFor='comments'
+								className='block text-base font-medium text-[#1B3A68] mb-2 uppercase tracking-wide'>
+								phone
+							</label>
+							<input
+								type='tel'
+								id='phone'
+								name='phone'
+								value={formData.phone}
+								onChange={handleInputChange}
+								required
+								className='w-full p-5 bg-gray-100 border-0 rounded-none focus:outline-none  transition-colors'
+							/>
+						</div>
+
+						{/* Text Consent */}
+
+						<div className=''>
+							<input
+								type='radio'
+								id='textConsent'
+								name='textConsent'
+								checked={formData.textConsent}
+								className='mt-1 w-4.5 h-4.5 text-[#1B3A68] border-gray-300 focus:ring-[#1B3A68] focus:ring-2'
 							/>
 							<label
-								htmlFor='textOptIn'
-								className='text-sm text-slate-600 leading-relaxed'>
+								htmlFor='textConsent'
+								className='text-lg text-[#6b6b6b] leading-relaxed ml-2'>
 								By checking this box, I agree to receive text messages from
 								Wagner, Falconer & Judd related with conversational
 								communications about updates, appointments, and legal matters.
@@ -179,16 +159,69 @@ export default function ContactForm() {
 								Privacy Policy and Terms & Conditions.
 							</label>
 						</div>
+
+						{/* reCAPTCHA */}
+						<div className='flex items-center gap-1.5 max-w-2xs bg-[#f0f0f0] p-2 px-4 border border-gray-300 shadow'>
+							<input
+								type='checkbox'
+								id='recaptcha'
+								name='recaptcha'
+								checked={formData.recaptcha}
+								required
+								className='w-4 h-4 text-[#1B3A68] focus:ring-[#1B3A68] focus:ring-2'
+							/>
+							<label
+								htmlFor='recaptcha'
+								className='text-sm text-black'>
+								I'm not a robot
+							</label>
+
+							<div className='text-xs text-black flex flex-col items-center ml-auto'>
+								<img
+									src={rechaptha}
+									alt='reCaptcha'
+									className='w-8.5 h-8.5'
+								/>
+								<span>Privacy - Terms</span>
+							</div>
+						</div>
+
+						{/* Additional Field */}
+						<div>
+							<label
+								htmlFor='additionalText'
+								className='block text-base font-medium text-[#1B3A68] mb-2 uppercase tracking-wide'>
+								TEXT
+							</label>
+							<input
+								type='text'
+								id='additionalText'
+								name='additionalText'
+								className='w-full p-5 bg-gray-100 border-0 rounded-none focus:outline-none  transition-colors'
+							/>
+						</div>
+
+						{/* Submit Button */}
+						<div className='flex justify-end'>
+							<button
+								type='button'
+								onClick={handleSubmit}
+								className='bg-blue-900 text-white px-8 py-4 font-bold text-base uppercase tracking-wide hover:bg-[#1B3A68] transition-colors duration-300 flex items-center gap-2 group'>
+								SUBMIT
+								<ArrowRight className='w-4 h-4 transition-transform duration-300 group-hover:translate-x-1' />
+							</button>
+						</div>
 					</div>
 
-					{/* Submit Button */}
-					<div className='flex justify-end pt-6'>
-						<button
-							type='button'
-							onClick={handleSubmit}
-							className='bg-slate-700 text-white px-8 py-3 rounded-md hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 transition-colors font-medium'>
-							SUBMIT →
-						</button>
+					{/* Disclaimer */}
+					<div className='mt-8 text-xs text-gray-500 leading-relaxed'>
+						<strong>NOTICE:</strong> Please do NOT email us any information
+						specific to your legal concern or that is confidential, as such
+						information is not privileged, confidential or otherwise protected
+						from disclosure. Sending us an email message does not create an
+						attorney-client relationship, create any fiduciary duty, make you a
+						client of us, or bind us to you in any contractual or other manner.
+						You agree that by clicking the "Submit" button...
 					</div>
 				</div>
 			</main>

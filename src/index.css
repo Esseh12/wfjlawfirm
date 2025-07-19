@@ -25,3 +25,42 @@ body {
 .font-din-condensed {
 	font-family: 'DIN Condensed', sans-serif;
 }
+
+@keyframes slideInLeft {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.slide-in-left {
+	animation: slideInLeft 4.5s ease-out forwards;
+}
+
+.diagonal-left-clip {
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@media (max-width: 1023px) {
+	.diagonal-left-clip {
+		clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+	}
+}
+
+@media (min-width: 1024px) {
+	.diagonal-left-clip {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
+	}
+}
+
+.hero-bg {
+	background-size: 45%;
+}
+
+@media (min-width: 1024px) {
+	.hero-bg {
+		background-size: 25%;
+	}
+}

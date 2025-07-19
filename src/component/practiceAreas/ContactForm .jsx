@@ -29,8 +29,6 @@ const ContactForm = ({ title }) => {
 
 	return (
 		<div className='bg-white max-w-6xl mx-auto px-4 py-24 font-din'>
-			{/* Parallax-style background section */}
-
 			<div className='text-left '>
 				<h1 className='text-2xl font-bold mb-1 font-din-condensed uppercase tracking-tight leading-9.5 text-[#1B3A68]'>
 					WE'RE HERE TO HELP

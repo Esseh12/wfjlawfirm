@@ -59,24 +59,24 @@ const TestimonialSlider = ({
 	return (
 		<div className='bg-[#1b3a68] text-white max-h-max'>
 			<div className='max-w-screen  mx-auto relative'>
-				{heading && (
-					<h2 className='text-2xl font-bold text-center mb-8'>{heading}</h2>
-				)}
-
 				<Slider {...sliderSettings}>
 					{testimonials.map((testimonial, index) => (
 						<div key={testimonial.id}>
 							<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[340px]'>
 								{/* Text Content */}
-								<div className='order-2 lg:order-1 pl-4 lg:pl-24'>
+								<div className='order-2 lg:order-1 pl-4 lg:pl-24 py-8 md:py-0'>
+									{heading && (
+										<h2 className='text-2xl font-bold text-left mb-8'>
+											{heading}
+										</h2>
+									)}
 									<p className='text-lg md:text-xl leading-relaxed mb-6'>
 										{testimonial.text}
 									</p>
 								</div>
-
 								{/* Image */}
 								<div className='hidden md:block order-1 lg:order-2'>
-									<div className='relative min-h-[340px] overflow-hidden flex justify-end'>
+									<div className='relative max-h-[340px] overflow-hidden flex justify-end'>
 										<img
 											src={testimonial.image}
 											alt={`Client testimonial ${index + 1}`}

@@ -4,8 +4,8 @@ const WagnerBuisnessSolution = () => {
 	return (
 		<>
 			<Hero title='Wagner Business Solutions' />
-			<section className='max-w-5xl mx-auto py-24 pb-36 flex flex-col space-y-14'>
-				<p className='text-xl font-normal leading-7 text-[#6b6b6b]'>
+			<section className='max-w-5xl mx-auto px-6 md:px-0  py-24 pb-36 flex flex-col space-y-14'>
+				<p className='text-lg md:text-xl font-normal leading-7 text-[#6b6b6b]'>
 					Wagner Business Solutions, a subsidiary of Wagner, Falconer & Judd,
 					Ltd., provides a professional proactive approach to commercial
 					collections and lien and bond enforcement. With our 90 years of
@@ -18,10 +18,10 @@ const WagnerBuisnessSolution = () => {
 				</p>
 				{/* Approach section */}
 				<div className='flex flex-col space-y-4'>
-					<h2 className='text-[#1B3A68] font-bold text-2xl leading-6.5'>
+					<h2 className='text-[#1B3A68] font-bold text-xl md:text-2xl leading-6.5'>
 						Approach
 					</h2>
-					<p className='text-[#6b6b6b] text-xl font-normal leading-7'>
+					<p className='text-[#6b6b6b] text-lg md:text-xl font-normal leading-7'>
 						WFJ was founded in 1932, and the client centric servicemodel that
 						built the firm is still the foundation we operate on today. We pride
 						ourselves in partnering with our clients to assist them in achieving
@@ -35,11 +35,11 @@ const WagnerBuisnessSolution = () => {
 				</div>
 				{/* Scope of Work */}
 				<div className='flex flex-col space-y-4'>
-					<h2 className='text-[#1B3A68] font-bold text-2xl leading-6.5'>
+					<h2 className='text-[#1B3A68] font-bold text-xl md:text-2xl leading-6.5'>
 						Scope of Work
 					</h2>
 					<div className='flex flex-col gap-4.5'>
-						<p className='text-[#6b6b6b] text-xl font-normal leading-7'>
+						<p className='text-[#6b6b6b] text-lg md:text-xl font-normal leading-7'>
 							We work with our clients on thousands of construction projects
 							each year, from the up-front contract review or title search, lien
 							or bond claim enforcement, contractual dispute resolution,
@@ -51,7 +51,7 @@ const WagnerBuisnessSolution = () => {
 							federal court litigation, mediation, arbitration and other
 							alternative dispute resolution processes.
 						</p>
-						<p className='text-[#6b6b6b] text-xl font-normal leading-7'>
+						<p className='text-[#6b6b6b]  text-lg md:text-xl font-normal leading-7'>
 							With WFJ as the quarterback in the collections process, not only
 							do we manage your legal or collection expense spend, but more
 							importantly, we serve as the one-stop shopexpert our clients can
@@ -60,7 +60,7 @@ const WagnerBuisnessSolution = () => {
 							hassle of handling of relationships with our local resources all
 							around the US and internationally.
 						</p>
-						<p className='text-[#6b6b6b] text-xl font-normal leading-7'>
+						<p className='text-[#6b6b6b]  text-lg md:text-xl font-normal leading-7'>
 							In addition to collection work, WFJ can assist clients on lien,
 							bond, and UCC perfection and enforcement, general contract
 							negotiation concerns, and bankruptcy matters, including preference
@@ -75,15 +75,15 @@ const WagnerBuisnessSolution = () => {
 
 				{/* The Benefits of Partnering with Wagner Business Solutions */}
 				<div className='flex flex-col space-y-8'>
-					<h1 className='text-3xl font-bold leading-8 text-[#1b3a68]'>
+					<h1 className='text-xl sm:text-2xl md:text-3xl font-bold leading-8 text-[#1b3a68]'>
 						The Benefits of Partnering with Wagner Business Solutions
 					</h1>
 					{/* Flexibility */}
 					<div className='flex flex-col gap-4'>
-						<h2 className='text-2xl font-bold text-[#1b3a68] leading-6.5 '>
+						<h2 className='text-xl md:text-2xl font-bold text-[#1b3a68] leading-6.5 '>
 							Flexibility
 						</h2>
-						<p className='text-xl leading-7 text-[#6b6b6b] font-normal'>
+						<p className='text-lg md:text-xl leading-7 text-[#6b6b6b] font-normal'>
 							We offer a full range of customizable commercial collection
 							services to optimize your success.
 						</p>
@@ -91,10 +91,10 @@ const WagnerBuisnessSolution = () => {
 
 					{/* Results */}
 					<div className='flex flex-col gap-4'>
-						<h2 className='text-2xl font-bold text-[#1b3a68] leading-6.5 '>
+						<h2 className='text-xl md:text-2xl font-bold text-[#1b3a68] leading-6.5 '>
 							Results
 						</h2>
-						<p className='text-xl leading-7 text-[#6b6b6b] font-normal'>
+						<p className='text-lg md:text-xl leading-7 text-[#6b6b6b] font-normal'>
 							Our motivated professionals, backed by a team of attorneys, are
 							focused on collecting your money. Wagner Business Solutions has an
 							industry leading collection percentage, with an 82 year history of
@@ -105,10 +105,10 @@ const WagnerBuisnessSolution = () => {
 
 					{/* Client Service */}
 					<div className='flex flex-col gap-4'>
-						<h2 className='text-2xl font-bold text-[#1b3a68] leading-6.5 '>
+						<h2 className='text-xl md:text-2xl font-bold text-[#1b3a68] leading-6.5 '>
 							Client Service
 						</h2>
-						<p className='text-xl leading-7 text-[#6b6b6b] font-normal'>
+						<p className='text-lg md:text-xl leading-7 text-[#6b6b6b] font-normal'>
 							Wagner Business Solutions began with a vision of offering
 							personalized, superior customer service, seeing beyond the need,
 							providing beyond the request, making the future happen today for
@@ -121,10 +121,10 @@ const WagnerBuisnessSolution = () => {
 
 					{/* Online Services */}
 					<div className='flex flex-col gap-4'>
-						<h2 className='text-2xl font-bold text-[#1b3a68] leading-6.5 '>
+						<h2 className='text-xl md:text-2xl font-bold text-[#1b3a68] leading-6.5 '>
 							Online Services
 						</h2>
-						<p className='text-xl leading-7 text-[#6b6b6b] font-normal'>
+						<p className='text-lg md:text-xl leading-7 text-[#6b6b6b] font-normal'>
 							Through our proprietary Client Extranet, Wagner Business Solutions
 							clients have 24/7 access to their files and custom reports which
 							keep them up to date on the status of their AR portfolio. This
@@ -138,10 +138,10 @@ const WagnerBuisnessSolution = () => {
 
 					{/* Legal Management */}
 					<div className='flex flex-col gap-4'>
-						<h2 className='text-2xl font-bold text-[#1b3a68] leading-6.5 '>
+						<h2 className='text-xl md:text-2xl font-bold text-[#1b3a68] leading-6.5 '>
 							Legal Management
 						</h2>
-						<p className='text-xl leading-7 text-[#6b6b6b] font-normal'>
+						<p className='text-lg md:text-xl leading-7 text-[#6b6b6b] font-normal'>
 							In the event a debtor will not pay voluntarily in adjustment, we
 							have an in-house team of attorneys positioned to appropriately
 							escalate your account through the legal process, including filing

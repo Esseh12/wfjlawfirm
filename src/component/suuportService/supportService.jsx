@@ -1,4 +1,3 @@
-import { FileText, Briefcase, Users, Clock, Settings } from 'lucide-react';
 import ComplianceIcon from '../../assets/images/compliance-icon.svg';
 import BusinessSupportIcon from '../../assets/images/business-support-icon.svg';
 import HumanResourcesIcon from '../../assets/images/human-resources-icon.svg';
@@ -66,19 +65,19 @@ const SupportComponent = () => {
 			{/* Header */}
 			<div className=' py-8'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<h1 className='text-2xl font-din-condensed leading-11.5 text-[#1b3468] font-bold text-center'>
+					<h1 className='text-xl md:text-2xl font-din-condensed md:leading-11.5 text-[#1b3468] font-bold text-center'>
 						BUSINESS SUPPORT, HR & COMPLIANCE, COLLECTIONS + MORE
 					</h1>
 				</div>
 			</div>
 
 			{/* Services Grid */}
-			<div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+			<div className='flex justify-center  md:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 md:py-12 pb-12'>
 				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto gap-8'>
 					{services.map((service, index) => (
 						<div
 							key={index}
-							className='bg-[#f0f0f0]  p-6 max-w-xs'>
+							className='bg-[#f0f0f0]  p-10 max-w-xs'>
 							<div className='flex flex-col items-center'>
 								{/* Icon */}
 								<div className='mb-4'>
@@ -99,7 +98,7 @@ const SupportComponent = () => {
 									{service.items.map((item, itemIndex) => (
 										<li
 											key={itemIndex}
-											className='flex items-start text-lg leading-5'>
+											className='flex items-start text-lg md:text-xl leading-5'>
 											<span>{item}</span>
 										</li>
 									))}

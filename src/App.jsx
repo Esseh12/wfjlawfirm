@@ -1,5 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	useLocation,
+} from 'react-router-dom';
 import Navbar from './component/Navbar';
+import Footer from './component/footer';
+
 import Home from './pages/home';
 import Contact from './pages/contact';
 import Careers from './pages/careers';
@@ -14,75 +21,99 @@ import Litigation from './pages/practiceAreas/litigation';
 import PersonalFamilyLaw from './pages/practiceAreas/personal/familylaw';
 import LegalSheidServices from './pages/practiceAreas/personal/legalSheidServices';
 import PersonalInjury from './pages/practiceAreas/personal/personalInjury';
-import Footer from './component/footer';
+import Login from './pages/login';
+import Perspectives from './pages/perspectives';
 
-const App = () => {
+const Layout = ({ children }) => {
+	const location = useLocation();
+
+	// Check if current path is login
+	const isLoginPage = location.pathname === '/client-login';
+
 	return (
-		<Router>
-			<Navbar />
-			<div className=''>
-				<Routes>
-					<Route
-						path='/'
-						element={<Home />}
-					/>
-					<Route
-						path='/contact'
-						element={<Contact />}
-					/>
-					<Route
-						path='/careers'
-						element={<Careers />}
-					/>
-					<Route
-						path='/attorneys'
-						element={<Attorney />}
-					/>
-					<Route
-						path='/support-services'
-						element={<SupportServices />}
-					/>
-					<Route
-						path='/wbs'
-						element={<WagnerBuisnessSolution />}
-					/>
-					<Route
-						path='/practice-areas/business'
-						element={<Business />}
-					/>
-					<Route
-						path='/practice-areas/commercial-collections'
-						element={<CommercialCollections />}
-					/>
-					<Route
-						path='/practice-areas/construction'
-						element={<Construction />}
-					/>
-					<Route
-						path='/practice-areas/employment'
-						element={<Employment />}
-					/>
-					<Route
-						path='/practice-areas/litigation'
-						element={<Litigation />}
-					/>
-					<Route
-						path='/practice-areas/personal/family-law'
-						element={<PersonalFamilyLaw />}
-					/>
-					<Route
-						path='/practice-areas/personal/legal-shield'
-						element={<LegalSheidServices />}
-					/>
-					<Route
-						path='/practice-areas/personal/personal-injury'
-						element={<PersonalInjury />}
-					/>
-				</Routes>
-			</div>
-			<Footer />
-		</Router>
+		<>
+			{!isLoginPage && <Navbar />}
+			<main>{children}</main>
+			{!isLoginPage && <Footer />}
+		</>
 	);
 };
+
+const AppRoutes = () => (
+	<Layout>
+		<Routes>
+			<Route
+				path='/'
+				element={<Home />}
+			/>
+			<Route
+				path='/contact'
+				element={<Contact />}
+			/>
+			<Route
+				path='/careers'
+				element={<Careers />}
+			/>
+			<Route
+				path='/attorneys'
+				element={<Attorney />}
+			/>
+			<Route
+				path='/support-services'
+				element={<SupportServices />}
+			/>
+			<Route
+				path='/wbs'
+				element={<WagnerBuisnessSolution />}
+			/>
+			<Route
+				path='/practice-areas/business'
+				element={<Business />}
+			/>
+			<Route
+				path='/practice-areas/commercial-collections'
+				element={<CommercialCollections />}
+			/>
+			<Route
+				path='/practice-areas/construction'
+				element={<Construction />}
+			/>
+			<Route
+				path='/practice-areas/employment'
+				element={<Employment />}
+			/>
+			<Route
+				path='/practice-areas/litigation'
+				element={<Litigation />}
+			/>
+			<Route
+				path='/practice-areas/personal/family-law'
+				element={<PersonalFamilyLaw />}
+			/>
+			<Route
+				path='/practice-areas/personal/legal-shield'
+				element={<LegalSheidServices />}
+			/>
+			<Route
+				path='/practice-areas/personal/personal-injury'
+				element={<PersonalInjury />}
+			/>
+			<Route
+				path='/perspectives'
+				element={<Perspectives />}
+			/>
+			<Route
+				path='/client-login'
+				element={<Login />}
+			/>
+		</Routes>
+	</Layout>
+);
+
+const App = () => (
+	<Router>
+		<AppRoutes />
+	</Router>
+);
 
 export default App;

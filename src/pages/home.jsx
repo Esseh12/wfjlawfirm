@@ -1,10 +1,12 @@
 import { ArrowRight } from 'lucide-react';
+import Hero from '../component/Home/hero';
 import Map from '../component/Home/map';
 import PracticeAreasSlider from '../component/Home/PracticeAreasSlide';
 
 const Home = () => {
 	return (
-		<section className=''>
+		<section className='pt-18 '>
+			<Hero />
 			<Map />
 			<section className='bg-white  py-16 md:py-24 px-8 md:px-0 max-w-5xl mx-auto text-left'>
 				<h1 className='font-din-condensed font-bold text-2xl md:text-3xl leading-9.5 text-[#1b3a68] mb-4'>

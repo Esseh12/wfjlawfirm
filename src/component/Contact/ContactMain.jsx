@@ -39,12 +39,12 @@ const ContactMain = () => {
 
 	const OfficeCard = ({ office }) => (
 		<div className='mb-12 '>
-			<h2 className='text-2xl  md:text-[46px] font-bold text-[#1B3A68] mb-4 uppercase tracking-wide leading-normal'>
+			<h2 className='text-2xl  md:text-3xl font-bold text-[#1B3A68] mb-4 uppercase tracking-wide leading-normal'>
 				{office.city}
 			</h2>
 			<div className='border-b-6 border-[#1B3A68] w-12 mb-6'></div>
 
-			<div className=' text-[#6B6B6B] mb-6 font-base text-3xl leading-normal'>
+			<div className=' text-[#6B6B6B] mb-6 font-base text-xl leading-normal'>
 				{office.name && <p className='font-base'>{office.name}</p>}
 				<p>{office.address}</p>
 				<p>{office.suite}</p>
@@ -52,25 +52,25 @@ const ContactMain = () => {
 			</div>
 
 			<div className='space-x-4 text-[#6B6B6B] mb-6 flex'>
-				<div className='flex items-center gap-2 text-3xl'>
-					<span className='font-bold text-3xl'>P</span>
+				<div className='flex items-center gap-2 text-xl'>
+					<span className='font-bold text-xl'>P</span>
 					<span>{office.phone}</span>
 				</div>
 				{office.phone2 && (
-					<div className='flex items-center gap-2 text-3xl'>
-						<span className='font-bold text-3xl'>P</span>
+					<div className='flex items-center gap-2 text-xl'>
+						<span className='font-bold text-xl'>P</span>
 						<span>{office.phone2}</span>
 					</div>
 				)}
-				<div className='flex items-center gap-2 text-3xl'>
-					<span className='font-bold text-3xl'>F</span>
+				<div className='flex items-center gap-2 text-xl'>
+					<span className='font-bold text-xl'>F</span>
 					<span>{office.fax}</span>
 				</div>
 			</div>
 
-			<button className='border border-[#1B3A68] text-[#1B3A68] px-6 py-3  font-bold uppercase tracking-wide flex items-center gap-2 text-3xl '>
+			<button className='border border-[#1B3A68] text-[#1B3A68] px-6 py-3  font-bold uppercase tracking-wide flex items-center gap-2 text-xl '>
 				GET DIRECTIONS
-				<ArrowRight className='text-3xl' />
+				<ArrowRight className='text-xl' />
 			</button>
 		</div>
 	);
@@ -78,7 +78,7 @@ const ContactMain = () => {
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			{/* Office Locations Section */}
-			<div className='max-w-7xl mx-auto px-6 py-16'>
+			<div className='max-w-5xl mx-auto px-6 py-16'>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-16'>
 					{offices.map((office, index) => (
 						<OfficeCard
@@ -91,12 +91,12 @@ const ContactMain = () => {
 
 			{/* Contact Us Section */}
 			<div className='bg-[#1B3A68] text-white py-16'>
-				<div className='max-w-7xl mx-auto px-6'>
-					<h2 className='text-4xl md:text-5xl font-bold mb-8 uppercase tracking-wide'>
+				<div className='max-w-5xl mx-auto px-6 font-din-condensed '>
+					<h2 className='text-2xl sm:text-3xl md:text-4xl  font-bold mb-8 uppercase tracking-wide'>
 						CONTACT US
 					</h2>
 
-					<div className='space-y-6 text-2xl leading-[42px]'>
+					<div className='space-y-6 text-lg md:text-xl leading-7 md:leading-9'>
 						<p>
 							If you are a long time client of the firm or just found WFJ while
 							surfing the web, we look forward to hearing from you. Please send
